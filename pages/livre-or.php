@@ -1,8 +1,5 @@
 <?php
-//connexion a la base de donnees
-
-
-session_start();
+/*connexion a la base de donnees*/
 require_once 'database.php';
 $conn = new PDO("mysql:host=localhost;dbname=livreor", "root", "");
 
@@ -40,10 +37,11 @@ $comments = $stmt->fetchAll();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Livre d'or</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Livre d'or</h1>
     <?php if (isset($_SESSION['user'])): ?>
         <a href="commentaire.php">Ajouter un commentaire</a>
     <?php endif; ?>
@@ -53,11 +51,5 @@ $comments = $stmt->fetchAll();
         <p><?= htmlspecialchars($comment['comment']) ?></p>
         <hr>
     <?php endforeach; ?>
-    <!--formulaire de recherche-->
-    <form method="get">
-    <input type="text" name="search" placeholder="Rechercher...">
-    <button type="submit">Chercher</button>
-</form>
-
 </body>
 </html>
