@@ -115,7 +115,42 @@ button {
 button:hover {
     background-color: rgb(233, 238, 209);
 }
+@media (max-width: 768px) {
+            .form-section {
+                width: 60%;
+            }
 
+            .title h1 {
+                font-size: 1.5rem;
+            }
+
+            input {
+                width: 90%;
+            }
+
+            button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .form-section {
+                width: 80%;
+            }
+
+            .title h1 {
+                font-size: 1.2rem;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            button {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
     </style>
 </head>
 <body>
