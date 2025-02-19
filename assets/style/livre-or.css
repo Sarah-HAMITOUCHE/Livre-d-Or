@@ -1,0 +1,138 @@
+/* 🌍 Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('assets/photos/photolivret.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+/* 🎯 Conteneur principal */
+.container {
+    width: 80%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* 🏷️ Titre centré */
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* 🔘 Boutons stylés */
+.button {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* 🔍 Barre de recherche */
+.search-form {
+    margin: 20px 0;
+}
+
+.search-form input {
+    width: 70%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-form button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #ff9800;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-form button:hover {
+    background: #e68900;
+}
+
+/* 📝 Zone de commentaires */
+.comment {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.comment p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.comment strong {
+    color: #ffeb3b;
+}
+
+/* 📄 Pagination */
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    color: white;
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+}
+
+.pagination a:hover, .pagination a.active {
+    background: #ff9800;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .search-form input {
+        width: 60%;
+    }
+}
