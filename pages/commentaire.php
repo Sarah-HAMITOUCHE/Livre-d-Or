@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Snell Roundhand', cursive
+    font-family: 'Lucida Calligraphy', cursive;
 }
 
 /* Style du corps de la page */

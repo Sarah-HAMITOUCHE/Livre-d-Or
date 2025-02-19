@@ -42,7 +42,8 @@ $comments = $stmt->fetchAll();
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Lucida Calligraphy', cursive;
+    
 }
 
 /* Style du corps de la page */
@@ -75,6 +76,8 @@ h1 {
 
 /* Formulaire de recherche */
 .search-form {
+    
+    font-family: 'Lucida Calligraphy', cursive;
     margin-bottom: 20px;
 }
 
