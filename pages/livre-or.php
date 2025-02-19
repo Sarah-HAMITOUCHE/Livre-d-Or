@@ -1,5 +1,9 @@
 <?php
 /*connexion a la base de donnees*/
+session_start();
+if (isset($_SESSION['user'])) {
+    echo '<a href="profil.php" class="button">Mon Profil</a>';
+}
 require_once 'database.php';
 $conn = new PDO("mysql:host=localhost;dbname=livreor", "root", "");
 
@@ -35,21 +39,54 @@ $comments = $stmt->fetchAll();
 
 <!--partie html -->
 <!DOCTYPE html>
-<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="livre-or.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Livre d'Or</h1>
+        <!-- 🔍 Barre de recherche -->
+        <form method="get" class="search-form">
+            <input type="text" name="search" placeholder="Rechercher un commentaire...">
+            <button type="submit">Chercher</button>
+        </form>
+        <div>
     <?php if (isset($_SESSION['user'])): ?>
-        <a href="commentaire.php">Ajouter un commentaire</a>
+    <a href="commentaire.php" class="button">Ajouter un commentaire</a>
     <?php endif; ?>
+    </div>
 
-    <?php foreach ($comments as $comment): ?>
-        <p><strong><?= $comment['login'] ?></strong> a écrit le <?= date('d/m/Y', strtotime($comment['date'])) ?> :</p>
-        <p><?= htmlspecialchars($comment['comment']) ?></p>
-        <hr>
-    <?php endforeach; ?>
+        <!-- 📝 Affichage des commentaires -->
+        <?php foreach ($comments as $comment): ?>
+            <div class="comment">
+                <p><strong><?= htmlspecialchars($comment['login']) ?></strong> a écrit le <?= date('d/m/Y', strtotime($comment['date'])) ?> :</p>
+                <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+</body>
+</html>
+
+        <!-- 📝 Affichage des commentaires -->
+        <?php if (!empty($comments)): ?>
+            <?php foreach ($comments as $comment): ?>
+                <div class="comment">
+                    <p><strong><?= htmlspecialchars($comment['login']) ?></strong> a écrit le 
+                        <?= date('d/m/Y', strtotime($comment['date'])) ?> :</p>
+                    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+                </div>
+            <?php endforeach; ?>
+
+        <?php else: ?>
+            <p class="no-comments">Aucun commentaire pour le moment.</p>
+        <?php endif; ?>
+
+    </div>
+
+
+
 </body>
 </html>

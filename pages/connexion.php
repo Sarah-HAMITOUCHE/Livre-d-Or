@@ -68,7 +68,6 @@ if (isset($_POST['submit'])) {
             <input type="text" name="login" placeholder="Nom d'utilisateur" required>
             <input type="password" name="password" placeholder="Mot de passe" required>
             <button type="submit" name="submit">Se connecter</button>
-            <button type="submit" name="submit">s'inscrire</button>
         </form>
         <?php
         session_start();
