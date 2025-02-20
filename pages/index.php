@@ -10,7 +10,7 @@
     </div>
 
     <div class="colonne">
-    <a href="inscription.php">S'inscrire</a> | <a href="connexion.php">Se connecter</a> | <a href="livre-or-accueil.php">Livre d'or</a>
+    <a href="inscription.php">S'inscrire</a> | <a href="connexion.php">Se connecter</a> | <a href="livre-or.php">Livre d'or</a>
     </div>
 </body>
 </html>
