@@ -96,7 +96,7 @@ h1 {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    height: 100px;
+    height: 60px;
     width: 100px;
 }
 
@@ -234,8 +234,6 @@ h1 {
     
     <div class="container">
     <?php if (isset($_SESSION['user'])): ?>
-            <a href="deconnexion.php" class="logout">Se déconnecter</a>
-            <a href="profil.php" class="edit-profile">Modifier mon profil</a>
         <?php endif; ?>
         <h1>Livre d'Or</h1>
         <!-- 🔍 Barre de recherche -->
@@ -244,9 +242,6 @@ h1 {
             <button type="submit">Chercher</button>
         </form>
         <div>
-    <?php if (isset($_SESSION['user'])): ?>
-    <a href="commentaire.php" class="button">Ajouter un commentaire</a>
-    <?php endif; ?>
     </div>
 
         <!-- 📝 Affichage des commentaires -->

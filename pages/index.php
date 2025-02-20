@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="title">
-       <h1>Bienvenue sur notre livre d'or</h1>
+       <h1>Bienvenue chers invités sur notre livre d'or</h1>
     </div>
 
     <div class="colonne">

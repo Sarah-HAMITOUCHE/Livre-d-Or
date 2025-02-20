@@ -10,6 +10,7 @@
  .title {
     height: 350px;
     display: flex;
+    margin-left: 20%;
     justify-content: center;
     align-items: center;
     text-align: center;
