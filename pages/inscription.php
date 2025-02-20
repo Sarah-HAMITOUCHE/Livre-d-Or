@@ -51,7 +51,7 @@
         }
         
         h2 {
-            font-size: 2rem;
+            font-size: rem;
             margin-bottom: 20px;
         }
         
@@ -65,12 +65,39 @@
         input {
             padding: 10px;
             border-radius: 5px;
-            border: 1px solidrgb(184, 154, 154);
+            border: 1px solid rgb(184, 154, 154);
             width: 300px;
             font-size: 1rem;
         }
         
         button {
+            background-color:rgb(175, 158, 80);
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-shadow: 2px 2px 5px rgba(31, 32, 29, 0.7);
+        }
+        
+        button:hover {
+            background-color:rgb(255, 255, 255);
+        }
+        button a:hover{
+            text-decoration: underline;
+        }
+
+        .success-message {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .connect{
             background-color:rgb(175, 158, 80);
             color: rgb(225, 225, 214);
             padding: 10px 20px;
@@ -79,9 +106,17 @@
             font-size: 1rem;
             cursor: pointer;
         }
-        
-        button:hover {
+        .connect:hover{
             background-color:rgb(233, 238, 209);
+        }
+        .connect a:hover{
+            text-decoration: underline;
+        }
+
+        .success-message a {
+            color:rgb(255, 255, 255);
+            font-weight: bold;
+            text-decoration: none;
         }
         @media (max-width: 768px) {
             .form-section {
@@ -131,7 +166,7 @@
         <form action="" method="post">
             <input type="text" name="login" placeholder="Nom d'utilisateur" required>
             <input type="password" name="password" placeholder="Mot de passe" required>
-            <button type="submit" name="submit">S'inscrire</button>
+            <button type="submit" name="submit"><strong>S'inscrire</strong></button>
         </form>
         
         <?php
@@ -141,12 +176,14 @@
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $stmt = $conn->prepare("INSERT INTO user (login, password) VALUES (?, ?)");
             if ($stmt->execute([$login, $password])) {
-                echo "<p style='color:green;'>Inscription réussie ! <a href='connexion.php'>Connectez-vous</a></p>";
+                echo "<div class='success-message'>Inscription réussie <a href='connexion.php' class='connect'>Connexion</a></div>";
+                
             } else {
                 echo "<p style='color:red;'>Erreur lors de l'inscription.</p>";
             }
         }
         ?>
     </div>
+ 
 </body>
 </html>
