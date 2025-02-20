@@ -43,6 +43,122 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <style>
 /* Add your CSS styles here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Calligraphy', cursive;
+}
+
+/* Style du corps de la page */
+body {
+    background: url('../assets/photos/photo5.png') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 90px;
+    color: white;
+    min-height: 100vh;
+    background-color: #c8d3c7;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(31, 32, 29, 0.7);
+}
+
+/* Messages d'information */
+.message {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color:rgb(255, 254, 248);
+    color:rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Labels des champs */
+label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Champs de saisie */
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f1dddd;
+    width: 300px;
+    font-size: 1rem;
+}
+
+/* Bouton de soumission */
+button {
+    background-color: #101005;
+    color: rgb(231, 231, 224);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color:rgb(142, 142, 142);
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
 </style>
 <body>
     <div class="container">
