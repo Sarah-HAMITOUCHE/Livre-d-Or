@@ -49,8 +49,8 @@ a:hover {
 
 /* Mise en page globale */
 body {
-   background: url(../assets/photos/photo5.png) no-repeat center center; 
-   background-size: contain;
+   background: url('../assets/photos/simple wedding PC background.png'); 
+   background-size: cover;
    text-align: center;
    padding-top: 20px;
    color: white;

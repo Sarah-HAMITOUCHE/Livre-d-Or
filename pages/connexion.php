@@ -32,8 +32,8 @@ if (isset($_POST['submit'])) {
 }
 
 body {
-    background: url('../assets/photos/photo7.jpg') no-repeat center center;
-    background-size: contain;
+    background: url('../assets/photos/photo7.jpg') center center;
+    background-size: cover;
     text-align: center;
     padding-top: 10px;
     padding-left: 30%;

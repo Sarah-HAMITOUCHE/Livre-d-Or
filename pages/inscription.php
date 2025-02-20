@@ -32,8 +32,8 @@
         }
         
         body {
-            background: url('../assets/photos/photo6.jpg') no-repeat center center;
-            background-size: contain;
+            background: url('../assets/photos/photo6.jpg');
+            background-size: cover;
             text-align: center;
             padding-top: 10px;
             color: white;
