@@ -1,7 +1,7 @@
 <?php
 /*connexion a la base de donnees*/
 session_start();
-require_once 'database.php';
+require_once 'classes/Database.php';
 $conn = new PDO("mysql:host=localhost;dbname=livreor", "root", "");
 
 /*pagination*/
